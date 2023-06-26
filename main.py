@@ -3,6 +3,15 @@ from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Функция аттаки.
+
+    Args:
+        char_name (str): name
+        char_class (str): class_game
+
+    Returns:
+        str: point_attak
+    """
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный '
                 f'{5 + randint(3, 5)}')
@@ -15,6 +24,15 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Defender.
+
+    Args:
+        char_name (str): name_playr
+        char_class (str): class_game
+
+    Returns:
+        str: points_def
+    """
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
     if char_class == 'mage':
@@ -24,6 +42,15 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Special_attak.
+
+    Args:
+        char_name (str): name_playr
+        char_class (str): class_game
+
+    Returns:
+        str: special_attak
+    """
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение'
                 '«Выносливость {80 + 25}»')
@@ -34,6 +61,15 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Start.
+
+    Args:
+        char_name (str): name_playr
+        char_class (str): class_game
+
+    Returns:
+        str: info
+    """
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -58,6 +94,11 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+    """Choice_class.
+
+    Returns:
+        str: class_game
+    """
     approve_choice: str = ''
     char_class: str = ''
     while approve_choice != 'y':
